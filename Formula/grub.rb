@@ -62,7 +62,7 @@ class Grub < Formula
     args << "--host=#{target}" if build.with? "grub-emu"
     # args << ""
 
-    system "sh", "autogen.sh"
+    system "sh", "./autogen.sh"
 
     mkdir "build" do
         system "../configure", *args
